@@ -16,12 +16,6 @@ export default class UserModel {
         return db.collection("users");
     }
 
-    async createUser(userDate) {
-        const collection = await this.connect();
-        return await collection.insertOne(userData);
-    }
-    async findUserByEmail(email) {}
-
     async findUserById(_id) {
         const collection = await this.connect();
         return await collection.findOne({ _id });
